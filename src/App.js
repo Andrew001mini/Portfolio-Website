@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import About from './components/About';
+import Portfolio from './components/Portfolio';
+import Contact from './components/Contact';
 import './App.css';
 
-function App() {
+const App = () => {
+  const socialMedia = {
+    instagram: "https://www.instagram.com/andrewsimmanuvel/",
+    email: "andrewsimmanuvel056@gmail.com",
+    linkedin: "https://www.linkedin.com/in/andrews-immanuvel-670822328",
+    twitter: "", // Leave empty if not available
+  };//this is the app component
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+      <Footer socialMedia={socialMedia} />
+    </Router>
   );
-}
+};
 
 export default App;
