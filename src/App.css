@@ -125,8 +125,8 @@ nav {
 }
 
 .portfolio-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid; /* Changed to grid for better alignment */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid layout */
   gap: 20px;
 }
 
@@ -135,8 +135,8 @@ nav {
   padding: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  flex: 1 1 30%; /* Adjusts item width in the grid */
   transition: transform 0.3s ease, background-color 0.3s ease; /* Transition for item */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 .portfolio-item:hover {
@@ -146,6 +146,27 @@ nav {
 
 .portfolio-item h2 {
   margin-top: 0;
+}
+
+.portfolio-item p {
+  margin: 10px 0; /* Add margin for spacing */
+  font-size: 0.9rem; /* Slightly smaller font for descriptions */
+  color: #666; /* Muted text color for readability */
+}
+
+.portfolio-item a {
+  display: inline-block;
+  margin-top: 10px; /* Space between description and link */
+  padding: 10px 15px;
+  background-color: #1a73e8; /* Consistent link button color */
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Transition for button background */
+}
+
+.portfolio-item a:hover {
+  background-color: #155ab6; /* Darker shade on hover */
 }
 
 /* Footer Styles */
@@ -191,7 +212,7 @@ footer:hover {
   }
 
   .portfolio-grid {
-    flex-direction: column;
+    grid-template-columns: 1fr; /* Stacks items vertically on small screens */
   }
 
   .portfolio-item {
