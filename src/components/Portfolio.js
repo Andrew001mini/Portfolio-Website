@@ -12,24 +12,24 @@ const portfolioData = [
     link: 'https://andrew001mini.github.io/Healthcare-Services-Manager/',
   },
   {
-    title: 'Portfolio Website',
-    description: 'A personal portfolio website to showcase my projects, skills, and experiences, designed with a minimalistic approach.',
-    link: 'https://andrew001mini.github.io/Portfolio-Website/',
-  },
-  {
-    title: 'Eco-Trailz',
-    description: 'A comprehensive platform for managing eco-tourism bookings, payments, and user engagement with dynamic features.',
+    title: 'Eco Trailz',
+    description: 'A comprehensive platform for managing bookings, payments, and user engagement for eco-tourism expeditions.',
     link: 'https://andrew001mini.github.io/Eco-Trailz/',
   },
   {
-    title: 'Better',
-    description: 'A web application that provides various services with a user-friendly interface and efficient functionality.',
+    title: 'Better.com Clone',
+    description: 'This project mimics the features of Better.com, providing users with mortgage solutions and services.',
     link: 'https://andrew001mini.github.io/Better/',
   },
   {
     title: 'Pokemon App',
-    description: 'A fun project that allows users to browse and search for different Pokemon, displaying their details and stats.',
+    description: 'A fun application that allows users to browse and search for Pokemon data.',
     link: 'https://andrew001mini.github.io/pokemon-app/',
+  },
+  {
+    title: 'Portfolio Website',
+    description: 'A personal portfolio website showcasing projects, skills, and contact information.',
+    link: 'https://andrew001mini.github.io/Portfolio-Website/',
   },
 ];
 
@@ -42,7 +42,6 @@ const Portfolio = () => {
           <div key={index} className="portfolio-item">
             <h2>{project.title}</h2>
             <p>{project.description}</p>
-            <a href={project.link} target="_blank" rel="noopener noreferrer">View Project</a>
           </div>
         ))}
       </div>
